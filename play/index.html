@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>赵长柱</title>
+	<style>
+		body {
+    		background: black
+		}
+		.product-camera {
+		    width: 400px;
+		    height: 400px;
+		    padding-left: 110px;
+		    perspective-origin: 65% -25%;
+		    -moz-perspective-origin: 65% -25%;
+		    -webkit-perspective-origin: 65% -25%;
+		    perspective: 1500px;
+		    -moz-perspective: 1500px;
+		    -webkit-perspective: 1500px;
+		}
+		.product-space {
+		    position: relative;
+		    width: 100%;
+		    height: 100%;
+		    transform-style: preserve-3d;
+		    -moz-transform-style: preserve-3d;
+		    -webkit-transform-style: preserve-3d;
+		    transform-origin: 100px 100px -100px;
+		    -moz-transform-origin: 100px 100px -100px;
+		    -webkit-transform-origin: 100px 100px -100px;
+		    -webkit-transform: rotateY(-30deg);
+		    -moz-transform: rotateY(-30deg);
+		    transform: rotateY(-30deg);
+		    animation: product-rotate 8s linear infinite;
+		    -moz-animation: product-rotate 8s linear infinite;
+		    -webkit-animation: product-rotate 8s linear infinite;
+		}
+		.tag-large a {
+		    width: 120px;
+		}
+		.tag-rotate a {
+		    min-width: 80px;
+		}
+		@keyframes product-rotate {
+		    0% {
+		        transform: rotateY(-30deg);
+		    }
+		    25% {
+		        transform: rotateY(0);
+		    }
+		    50% {
+		        transform: rotateY(-30deg);
+		    }
+		    75% {
+		        transform: rotateY(0);
+		    }
+		    100% {
+		        transform: rotateY(-30deg);
+		    }
+		}
+		@keyframes product-float {
+		    0% {
+		        transform: translateY(0);
+		    }
+		    25% {
+		        transform: translateY(5px);
+		    }
+		    50% {
+		        transform: translateY(-5px);
+		    }
+		    75% {
+		        transform: translateY(3px);
+		    }
+		    100% {
+		        transform: translateY(0);
+		    }
+		}
+		.product-space div {
+		    position: absolute;
+		    margin-top: -10px;
+		}
+		.product-space-special div {
+		    margin-top: 50px!important;
+		}
+		/*.product-space .product-box1,.product-space .product-box2,.product-space .product-box4,.product-box5,.product-box3{*/
+
+		.product-space>div {
+		    transform-style: preserve-3d;
+		    -moz-transform-style: preserve-3d;
+		    -webkit-transform-style: preserve-3d;
+		}
+		.product-space .product-box1 div,
+		.product-space .product-box2 div,
+		.product-space .product-box4 div {
+		    width: 0;
+		    height: 0;
+		    border-style: solid;
+		    opacity: 0.9;
+		}
+		.product-space .product-box1 div {
+		    border-width: 0 100px 200px;
+		}
+		.product-space .product-box2 div {
+		    border-width: 0 100px 210px;
+		}
+		.product-space .product-box3 div {
+		    width: 200px;
+		    height: 0;
+		    border-bottom: 100px solid #00C4FF;
+		    border-left: 50px solid transparent;
+		    border-right: 50px solid transparent;
+		}
+		.product-space .product-box4 div {
+		    border-width: 0 100px 248px;
+		}
+		.product-space .product-box1 .face1 {
+		    border-color: transparent transparent #53CFFF;
+		    transform-origin: center bottom;
+		    transform: rotateX(30.00deg);
+		    -moz-transform-origin: center bottom;
+		    -moz-transform: rotateX(30.00deg);
+		    -webkit-transform-origin: center bottom;
+		    -webkit-transform: rotateX(30.00deg);
+		}
+		.product-space .product-box1 .face2 {
+		    border-color: transparent transparent #18BEFF;
+		    transform-origin: right bottom;
+		    transform: rotateY(-90deg) rotateX(-30.00deg);
+		    -moz-transform-origin: right bottom;
+		    -moz-transform: rotateY(-90deg) rotateX(-30.00deg);
+		    -webkit-transform-origin: right bottom;
+		    -webkit-transform: rotateY(-90deg) rotateX(-30.00deg);
+		}
+		.product-space .product-box1 .face3 {
+		    border-color: transparent transparent #11ABFF;
+		    transform-origin: left bottom;
+		    transform: translateZ(-200px) rotateX(-30.00deg);
+		    -moz-transform-origin: left bottom;
+		    -moz-transform: translateZ(-200px) rotateX(-30.00deg);
+		    -webkit-transform-origin: left bottom;
+		    -webkit-transform: translateZ(-200px) rotateX(-30.00deg);
+		}
+		.product-space .product-box1 .face4 {
+		    border-color: transparent transparent #028AD6;
+		    transform-origin: left bottom;
+		    transform: rotateY(90deg) rotateX(-30.00deg);
+		    -moz-transform-origin: left bottom;
+		    -moz-transform: rotateY(90deg) rotateX(-30.00deg);
+		    -webkit-transform-origin: left bottom;
+		    -webkit-transform: rotateY(90deg) rotateX(-30.00deg);
+		}
+		.product-space .product-box2 .face1 {
+		    border-color: transparent transparent #11ABFF;
+		    transform-origin: center bottom;
+		    transform: rotateX(28.42deg);
+		    -moz-transform-origin: center bottom;
+		    -moz-transform: rotateX(28.42deg);
+		    -webkit-transform-origin: center bottom;
+		    -webkit-transform: rotateX(28.42deg);
+		}
+		.product-space .product-box2 .face2 {
+		    border-color: transparent transparent #0296D0;
+		    transform-origin: right bottom;
+		    transform: rotateY(-90deg) rotateX(-28.42deg);
+		    -moz-transform-origin: right bottom;
+		    -moz-transform: rotateY(-90deg) rotateX(-28.42deg);
+		    -webkit-transform-origin: right bottom;
+		    -webkit-transform: rotateY(-90deg) rotateX(-28.42deg);
+		}
+		.product-space .product-box2 .face3 {
+		    border-color: transparent transparent #07B5F9;
+		    transform-origin: left bottom;
+		    transform: translateZ(-200px) rotateX(-28.42deg);
+		    -moz-transform-origin: left bottom;
+		    -moz-transform: translateZ(-200px) rotateX(-28.42deg);
+		    -webkit-transform-origin: left bottom;
+		    -webkit-transform: translateZ(-200px) rotateX(-28.42deg);
+		}
+		.product-space .product-box2 .face4 {
+		    border-color: transparent transparent #028AD6;
+		    transform-origin: left bottom;
+		    transform: rotateY(90deg) rotateX(-28.42deg);
+		    -moz-transform-origin: left bottom;
+		    -moz-transform: rotateY(90deg) rotateX(-28.42deg);
+		    -webkit-transform-origin: left bottom;
+		    -webkit-transform: rotateY(90deg) rotateX(-28.42deg);
+		}
+		.product-space .product-box3 .face1 {
+		    border-bottom: 100px solid #53CFFF;
+		    transform-origin: center bottom;
+		    transform: rotateX(30.000deg);
+		    -moz-transform-origin: center bottom;
+		    -moz-transform: rotateX(30.000deg);
+		    -webkit-transform-origin: center bottom;
+		    -webkit-transform: rotateX(30.000deg);
+		}
+		.product-space .product-box3 .face2 {
+		    border-bottom: 100px solid #18BEFF;
+		    transform-origin: right bottom;
+		    transform: rotateY(-90deg) rotateX(-30.000deg);
+		    -moz-transform-origin: right bottom;
+		    -moz-transform: rotateY(-90deg) rotateX(-30.000deg);
+		    -webkit-transform-origin: right bottom;
+		    -webkit-transform: rotateY(-90deg) rotateX(-30.000deg);
+		}
+		.product-space .product-box3 .face3 {
+		    border-bottom: 100px solid #07B5F9;
+		    transform-origin: left bottom;
+		    transform: translateZ(-200px) rotateX(-30.000deg);
+		    -moz-transform-origin: left bottom;
+		    -moz-transform: translateZ(-200px) rotateX(-30.000deg);
+		    -webkit-transform-origin: left bottom;
+		    -webkit-transform: translateZ(-200px) rotateX(-30.000deg);
+		}
+		.product-space .product-box3 .face4 {
+		    border-bottom: 100px solid #028AD6;
+		    transform-origin: left bottom;
+		    transform: rotateY(90deg) rotateX(-30.000deg);
+		    -moz-transform-origin: left bottom;
+		    -moz-transform: rotateY(90deg) rotateX(-30.000deg);
+		    -webkit-transform-origin: left bottom;
+		    -webkit-transform: rotateY(90deg) rotateX(-30.000deg);
+		}
+		.product-space .product-box4 .face1 {
+		    border-color: transparent transparent #11ABFF;
+		    transform-origin: center bottom;
+		    transform: rotateX(23.78deg);
+		    -moz-transform-origin: center bottom;
+		    -moz-transform: rotateX(23.78deg);
+		    -webkit-transform-origin: center bottom;
+		    -webkit-transform: rotateX(23.78deg);
+		}
+		.product-space .product-box4 .face2 {
+		    border-color: transparent transparent #0296D0;
+		    transform-origin: right bottom;
+		    transform: rotateY(-90deg) rotateX(-23.78deg);
+		    -moz-transform-origin: right bottom;
+		    -moz-transform: rotateY(-90deg) rotateX(-23.78deg);
+		    -webkit-transform-origin: right bottom;
+		    -webkit-transform: rotateY(-90deg) rotateX(-23.78deg);
+		}
+		.product-space .product-box4 .face3 {
+		    border-color: transparent transparent #07B5F9;
+		    transform-origin: left bottom;
+		    transform: translateZ(-200px) rotateX(-23.78deg);
+		    -moz-transform-origin: left bottom;
+		    -moz-transform: translateZ(-200px) rotateX(-23.78deg);
+		    -webkit-transform-origin: left bottom;
+		    -webkit-transform: translateZ(-200px) rotateX(-23.78deg);
+		}
+		.product-space .product-box4 .face4 {
+		    border-color: transparent transparent #028AD6;
+		    transform-origin: left bottom;
+		    transform: rotateY(90deg) rotateX(-23.78deg);
+		    -moz-transform-origin: left bottom;
+		    -moz-transform: rotateY(90deg) rotateX(-23.78deg);
+		    -webkit-transform-origin: left bottom;
+		    -webkit-transform: rotateY(90deg) rotateX(-23.78deg);
+		}
+		.product-space .product-box5 .face1 {
+		    width: 100px;
+		    height: 100px;
+		    background: #9BDCFF;
+		    transform-origin: center bottom;
+		    transform: rotateX(90deg);
+		    -moz-transform-origin: center bottom;
+		    -moz-transform: rotateX(90deg);
+		    -webkit-transform-origin: center bottom;
+		    -webkit-transform: rotateX(90deg);
+		}
+		.product-space .product-box1 {
+		    transform-origin: center 100px -100px;
+		    /*transform: rotateX(-10deg);*/
+		    
+		    -moz-transform-origin: center 100px -100px;
+		    /*-moz-transform: rotateX(-10deg);*/
+		    
+		    -webkit-transform-origin: center 100px -100px;
+		    /*-webkit-transform: rotateX(-10deg);*/
+		}
+		.product-space .product-box2 {
+		    transform-origin: center 124px -100px;
+		    transform: rotateX(180deg) translateY(-142px);
+		    -moz-transform-origin: center 124px -100px;
+		    -moz-transform: rotateX(180deg) translateY(-142px);
+		    -webkit-transform-origin: center 124px -100px;
+		    -webkit-transform: rotateX(180deg) translateY(-142px);
+		}
+		.product-space .product-box4 {
+		    transform-origin: center 124px -100px;
+		    transform: rotateX(180deg) translateY(-200px);
+		    -moz-transform-origin: center 124px -100px;
+		    -moz-transform: rotateX(180deg) translateY(-200px);
+		    -webkit-transform-origin: center 124px -100px;
+		    -webkit-transform: rotateX(180deg) translateY(-200px);
+		}
+		.product-space .product-box5 {
+		    -webkit-transform: translate3d(50px, -87px, -50px);
+		    -moz-transform: translate3d(50px, -87px, -50px);
+		    transform: translate3d(50px, -87px, -50px);
+		}
+		.function-bg {
+		    position: absolute;
+		    top: 0;
+		    left: 25px;
+		}
+		.function-bg .function-bg-container {
+		    position: relative;
+		}
+		.function-bg .function-bg-container img {
+		    position: absolute;
+		}
+		.function-bg .function-bg-container img:nth-child(1) {
+		    top: 250px;
+		    left: 350px;
+		}
+		.function-bg .function-bg-container img:nth-child(2) {
+		    left: 30px;
+		    top: 50px;
+		}
+		.function-bg .function-bg-container img:nth-child(3) {
+		    top: 300px;
+		    left: 50px;
+		}
+		.function-bg .function-bg-container img:nth-child(4) {
+		    width: 600px;
+		    height: 600px;
+		    top: -100px;
+		    left: -140px;
+		    z-index: -1;
+		    opacity: 0.35;
+		}
+		.function-bg .function-bg-container img:nth-child(5) {
+		    z-index: -1;
+		}
+		.function-bg .function-bg-container img:nth-child(5),
+		.function-bg .function-bg-container img:nth-child(6) {
+		    width: 620px;
+		    height: 700px;
+		    top: -140px;
+		    left: -140px;
+		}
+		
+	</style>
+</head>
+<body>
+<div class="product-camera">
+    <div class="product-space">
+        <div class="product-box1">
+            <div class="face1"></div>
+            <div class="face2"></div>
+            <div class="face3"></div>
+            <div class="face4"></div>
+        </div>
+        <div class="product-box2">
+            <div class="face1"></div>
+            <div class="face2"></div>
+            <div class="face3"></div>
+            <div class="face4"></div>
+        </div>
+    </div>
+    <div class="function-bg">
+        <div class="function-bg-container">
+            <!-- <img src="/uploads/1901/shape-six-01.png">
+            <img src="/uploads/1901/shape-six-02.png">
+            <img src="/uploads/1901/shape-six-03.png"> -->
+            <!-- <img src="/uploads/1901/product-function-bg.png">
+            <img src="/uploads/1901/frame-next.png">
+            <img src="/image/11.png">
+            <img src="/image/22.png"> -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
