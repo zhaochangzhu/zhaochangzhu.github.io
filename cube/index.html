@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>正方体</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			perspective: 500px;
+		}
+		ul{
+			width: 200px;
+			height: 200px;
+			/*border: 1px solid #000;*/
+			box-sizing: border-box;
+			margin: 100px auto;
+			position: relative;
+			transform: rotateY(0deg) rotateX(0deg);
+			transform-style: preserve-3d;
+			animation: sport 5s linear 0s infinite normal;
+		}
+		ul li{
+			list-style: none;
+			width: 200px;
+			height: 200px;
+			font-size: 60px;
+			text-align: center;
+			line-height: 200px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		ul li:nth-child(1){
+			background-color: red;
+			transform: rotateX(90deg) translateZ(100px)
+			scale(2,1);
+
+		}
+		ul li:nth-child(2){
+			background-color: green;
+			transform: rotateX(180deg) translateZ(100px)
+			scale(2,1);
+
+		}
+		ul li:nth-child(3){
+			background-color: blue;
+			transform: rotateX(270deg) translateZ(100px)
+			scale(2,1);
+
+		}
+		ul li:nth-child(4){
+			background-color: yellow;
+			transform: rotateX(360deg) translateZ(100px)
+			scale(2,1);
+
+		}
+		ul li:nth-child(5){
+			background-color: pink;
+			transform: translateX(-200px) rotateY(90deg);
+
+
+		}
+		ul li:nth-child(6){
+			background-color: purple;
+			transform: translateX(200px) rotateY(90deg);
+
+		}
+		ul li img{
+			width: 200px;
+			height: 200px;
+		}
+		@keyframes sport{
+			from{
+				transform: rotateX(0deg);
+
+			}
+			to{
+				transform: rotateX(360deg);
+
+			}
+
+		}
+		/*.father{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			border: 1px solid #000;
+			margin: 100px auto;
+			perspective: 500px;
+			transform-style: preserve-3d;
+			transform: rotateY(0deg);
+		}
+		.son{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			border: 1px solid #000;
+			margin: 0 auto;
+			margin-top: 50px;
+			transform: rotateY(45deg);
+		}
+*/
+	</style>
+</head>
+<body>
+	<!-- <div class="father">
+		<div class="son"></div>
+	</div> -->
+	<ul>
+		<li><img src="image/1.jpg"></li>
+		<li><img src="image/2.jpg"></li>
+		<li><img src="image/3.jpg"></li>
+		<li><img src="image/4.jpg"></li>
+		<li>5</li>
+		<li>6</li>
+
+	</ul>
+
+
+</body>
+</html>
